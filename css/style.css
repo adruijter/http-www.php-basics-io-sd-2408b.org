@@ -10,4 +10,20 @@ div {
     padding:1em;
     border-radius: 2em;
     color: white;
+    margin-bottom: 1em;
+}
+
+#div-1 {
+    background-color: antiquewhite;
+    color: brown
+}
+
+#div-2 {
+    background-color: azure;
+    color: red;
+}
+
+.test {
+    background-color: blue;
+    color: white;
 }
