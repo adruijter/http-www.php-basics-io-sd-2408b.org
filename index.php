@@ -14,6 +14,9 @@
         <li>
             <a href="app/lesweek1.php">Tekst op het scherm zetten met PHP</a>
         </li>
+        <li>
+            <a href="app/lesweek2.php">Datatypen met PHP</a>
+        </li>
     </ol>
 
 

@@ -76,7 +76,6 @@
         $woonplaats1 = "Maastricht";  // Dit is mijn woonplaats
         $schoenmaat1 = 6;
         $hobby1 = "Slapen";
-
         
     ?>
     <div class="test">
