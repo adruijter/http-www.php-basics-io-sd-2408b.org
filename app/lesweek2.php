@@ -15,6 +15,7 @@
         $schoolnaam = 'MBO Utrecht';
         echo "<p>Ik zit op $schoolnaam</p>";
 
+        // Dit is een integer variabele
         $aantalStudenten = 489;
         echo "<p>Het aantal studenten op school is $aantalStudenten</p>";
 
@@ -29,10 +30,69 @@
 
         $verdrievoudiging = 3;
         $totaalAantalStudenten = $totaalAantalStudenten * $verdrievoudiging;
-        echo "Over 3 jaar verwachten we een verdrievoudiging van het aantal studenten naar $totaalAantalStudenten";
+        // $totaalAantalStudenten *= $verdrievoudiging;
+        echo "<p>Over 3 jaar verwachten we een verdrievoudiging van het aantal studenten naar $totaalAantalStudenten</p>";
+
+        $dalingAantalStudenten = 245;
+        $totaalAantalStudenten = $totaalAantalStudenten - $dalingAantalStudenten;
+        // $totaalAantalStudenten -= $dalingAantalStudenten;
+        echo "<p>Over 5 jaar verwachten we een daling van $dalingAantalStudenten naar $totaalAantalStudenten</p>";
+
+        $halvering = 2;
+        $totaalAantalStudenten = $totaalAantalStudenten / $halvering;
+        // $totaalAantalStudenten /= $halvering;
+        echo "<p>Over 7 jaar verwachten we een halvering van het aantal naar $totaalAantalStudenten</p>";
+
+        $voornaam = "Arjan";
+        $achternaam = " de Ruijter";
+        $volledigeNaam = $voornaam . $achternaam;
+        echo "Mijn volledige naam is $volledigeNaam";
+
+        // De Boolean variabelen kan maar twee waarden aannemen 1 of 0, true of false
+        $ingeschrevenBijMBOUtrecht = true;
+
+        if ($ingeschrevenBijMBOUtrecht ) {
+          echo "<p>Je bent ingeschreven bij MBO Utrecht</p>";
+        } else {
+          echo "<p>Je bent niet ingeschreven bij MBO Utrecht</p>"; 
+        }
+
+        // Je kan ook 1 of 0 gebruiken
+        $ikBenMiljonair = 1;
+
+        if ( $ikBenMiljonair ) {
+            echo "<p>Ik ben miljonair</p>";
+        } else {
+            echo "<p>Ik ben nog geen miljonair</p>";
+        }
+
+        
+        if (isset($_POST['user'])) { 
+            $user = $_POST['user'];
+        } else {
+            $user ="";
+        }
+
+        if ($user == 'Admin') {
+            echo "U wordt doorgestuurd naar index!!!!";
+            header("Refresh:3; url=../index.php");
+        } elseif ($user == 'Root') {
+            echo "<p>Je hebt root ingevoerd</p>";
+        } elseif ($user == 'customer') {
+
+        } else {
+            echo "<p>U heeft niets te zoeken op deze webapp</p>";
+        }
+
+
 
 
     ?>
+
+    <form action="lesweek2.php" method="post">
+        <input type="text" name="user">
+        <input type="submit">
+    </form>
 
 </body>
 </html>
