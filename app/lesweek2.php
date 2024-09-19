@@ -152,6 +152,37 @@
             echo "<p>$listnumber. $item</p>";
         }
 
+        /**
+         * Maak een array met daarin je 8 favoriete sneakers. Gebruik een 
+         * foreach-loop en de output moet er als volgt uitzien:
+         * 
+         * Mijn favoriete sneakers
+         * ***********************
+         * Schoen 1: Adidas
+         * Schoen 2: ......
+         * enz.....
+         * Schoen 8: Nike
+         */
+
+         $sneakers = array(
+            'Nike',
+            'Adidas',
+            'Vans',
+            'Reebok',
+            'Sketchers',
+            'Le Coq Sportive',
+            'Asics',
+            'All Stars'
+         );
+
+         echo "<p>Mijn favoriete sneakers</p>";
+         echo "<p>**********************</p>";
+
+         $number = 0;
+         foreach ($sneakers as $item) {
+            $number++;
+            echo "<p>Schoen $number. $item</p>";
+         }
 
         
     ?>
