@@ -84,7 +84,23 @@
             echo "<p>U heeft niets te zoeken op deze webapp</p>";
         }
 
+        /**
+         * Hieronder staan voorbeelden van het datatype array
+         */
 
+        $snoep = "Maltezers";
+        echo "<p>Een van mijn favo snoep is: $snoep</p>";
+
+        $snoep2 = "Mars";
+        echo "<p>Een van mijn favo snoep is: $snoep2</p>";
+
+        // Hieronder staat een array, aan de waarden is een index gekoppeld. De 
+        // index begint bij 0:
+        //                  0          1
+        $snoep = array('Maltezers', 'Mars');
+        echo "<p>Mijn favo snoep is: $snoep[1]</p>";
+
+        
 
 
     ?>
