@@ -94,15 +94,49 @@
         $snoep2 = "Mars";
         echo "<p>Een van mijn favo snoep is: $snoep2</p>";
 
-        // Hieronder staat een array, aan de waarden is een index gekoppeld. De 
-        // index begint bij 0:
+        /* Hieronder staat een array, aan de waarden is een index gekoppeld. De 
+           index begint bij 0: */
         //                  0          1
-        $snoep = array('Maltezers', 'Mars');
+        $snoep = array(
+            'Maltezers', 
+            'Mars', 
+            'Twix', 
+            'Milky Way', 
+            'Nuts', 
+            'Lion', 
+            'Bounty',
+            'Top drop'
+        );
+
+        echo count($snoep);
+
+        echo "<p>Mijn favo snoep is: $snoep[0]</p>";
         echo "<p>Mijn favo snoep is: $snoep[1]</p>";
+        echo "<p>Mijn favo snoep is: $snoep[2]</p>";
+        echo "<p>Mijn favo snoep is: $snoep[3]</p>";
+        echo "<p>Mijn favo snoep is: $snoep[4]</p>";
+        echo "<p>Mijn favo snoep is: $snoep[5]</p>";
+        echo "<p>Mijn favo snoep is: $snoep[6]</p>";
+
+        echo "<p>Mijn top " . count($snoep) . " snoeplijst</p>";
+        echo "============";
+        echo "<ol>"; 
+        foreach ($snoep as $item)  {
+            echo "<li>$item</li>";
+        }
+        echo "</ol>";
+
+        /**
+         * Maak een array met een top 5 lijstje met daarin 5 van jou
+         * favoriete games en gebruik daarvoor een foreach-loop om deze 
+         * op het scherm te zetten. Voor elk spel moet een nummer staan
+         * maar daar mag je geen <ol><li></li></ol> voor gebruiken. Gebruik
+         * een nieuwe variabele $listnumber
+         */
+
+
 
         
-
-
     ?>
 
     <form action="lesweek2.php" method="post">
