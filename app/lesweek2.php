@@ -134,6 +134,23 @@
          * een nieuwe variabele $listnumber
          */
 
+        $games = [
+            'Tears of dread',
+            'Tomb Raider',
+            'Dracula',
+            'First Blood',
+            'Close Encounters'
+        ];
+
+
+        echo "<p>Mijn top " . count($games) . " favoriete games</p>";
+        echo "<p>++++++++++++++++++</p>";
+        $listnumber = 0;
+        foreach ($games as $item) {
+            // $listnumber = $listnumber + 1;
+            $listnumber++;
+            echo "<p>$listnumber. $item</p>";
+        }
 
 
         
