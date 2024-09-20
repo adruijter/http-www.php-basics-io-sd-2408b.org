@@ -186,7 +186,95 @@
          }
 
 
+         /**
+          * We gaan nu een associatief array bekijken
+          */
+         $persoonsgegevens = array(
+            'voornaam' => 'Arjan', 
+            'tussenvoegsel' => 'de',
+            'achternaam' => 'Ruijter',
+         );
 
+         echo "<p>Mijn voornaam is: {$persoonsgegevens['voornaam']} {$persoonsgegevens['tussenvoegsel']} {$persoonsgegevens['achternaam']}</p>";
+
+         // Opdracht geef je naam weer met een foreach-loop
+
+         foreach ($persoonsgegevens as $key => $value)  {
+            echo "<p>$key: $value</p>";
+         }
+
+         /**
+         * Maak een associatief array met daarin je 8 favoriete sneakers inclusief prijs. Gebruik een 
+         * foreach-loop en de output moet er als volgt uitzien:
+         * 
+         * Mijn favoriete sneakers
+         * ***********************
+         * Schoen 1: Adidas - 231,45 euro
+         * Schoen 2: ......
+         * enz.....
+         * Schoen 8: Nike - 187,67 euro
+         */
+
+         $sneakers = array(
+            'Nike' => '231,45',
+            'Adidas' => '456,03',
+            'Vans' => '4,95',
+            'Reebok' => '345,98',
+            'Sketchers' => '56,34',
+            'Le Coq Sportive' => '1234,45',
+            'Asics' => '32,34',
+            'All Stars' => '199,99'
+         );
+
+         echo "<h3>Mijn favoriete sneakers</h3>";
+         echo "************************<br>";
+
+         $number = 0;
+         foreach ($sneakers as $shoe => $price) {
+            $number++;
+            echo "<p>Schoen $number: $shoe - $price &euro;</p>";
+         }
+
+         /**
+         * Maak een associatief array met daarin de top 5 snelste auto's ter wereld met
+         * de topsnelheid daarin vermeld.Je mag niet sorteren in je array op snelheid van 
+         * hoog naar laag maar dat moet later
+         * gebeuren met een array sorteer functie. De output ziet er als volgt uit:
+         * 
+         * ====================================
+         * Top 5 snelste sportauto's ter wereld
+         * ====================================
+         * 1. Bugatti Veyron => 456 km/h 
+         * 2. Fiat Diablo    => 234 km/h
+         * 3. ...........
+         * 
+         */
+
+         $fastestCars = array(
+            'Bugatti Chiron Super Sport 300+' => '490',
+            'SSC Tuatara' => '475',           
+            'Hennessey Venom F5' => '437',
+            'Koenigsegg Jesko Absolut' => '531',
+            'Rimec Nevera' => '415'
+          );
+
+        //   var_dump($fastestCars);
+
+        //   arsort($fastestCars);
+        
+
+        //   var_dump($fastestCars);
+
+        echo "======================<br>";
+        echo "<p>Top " . count($fastestCars) . " snelste sportauto's ter wereld</p>";
+        echo "======================<br>";
+
+        $number = 1;
+        foreach ($fastestCars as $carname => $speed) {
+            echo "<p>$number. $carname => $speed km/u</p>";
+            $number++;
+        }
+    
         
     ?>
 
