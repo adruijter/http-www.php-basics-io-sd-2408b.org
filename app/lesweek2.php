@@ -117,6 +117,7 @@
         echo "<p>Mijn favo snoep is: $snoep[4]</p>";
         echo "<p>Mijn favo snoep is: $snoep[5]</p>";
         echo "<p>Mijn favo snoep is: $snoep[6]</p>";
+        echo "<p>Mijn favo snoep is: $snoep[7]</p>";
 
         echo "<p>Mijn top " . count($snoep) . " snoeplijst</p>";
         echo "============";
@@ -183,6 +184,8 @@
             $number++;
             echo "<p>Schoen $number. $item</p>";
          }
+
+
 
         
     ?>
