@@ -17,6 +17,9 @@
         <li>
             <a href="app/lesweek2.php">Datatypen met PHP</a>
         </li>
+        <li>
+            <a href="app/lesweek3.php">Functies met PHP</a>
+        </li>
     </ol>
 
 
