@@ -107,7 +107,11 @@
      * 10 x 3 = 30
      */
 
+    $getallen = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
+    foreach ($getallen as $getal) {
+        echo "<p>$getal x ... = ...</p>";
+    }
 
     ?>
     
