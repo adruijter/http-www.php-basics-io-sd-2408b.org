@@ -107,12 +107,51 @@
      * 10 x 3 = 30
      */
 
-    $getallen = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    // 
 
-    foreach ($getallen as $getal) {
-        echo "<p>$getal x ... = ...</p>";
+    // function tafel($getal, $factor )
+    // {
+    //     $product = $getal * $factor;
+    //     return "<p>$getal x $factor = $product</p>";        
+    // }
+    
+    // foreach ($getallen as $getal) {
+    //     echo tafel($getal, 5);
+    // }
+
+    // tafel(6); //geeft de tafel van 6
+    // tafel(9); //geeft de tafel van 9
+
+    function tafel($getal)
+    {
+        echo "<h3>De tafel van $getal</h3>";
+        echo "***************";
+        /**
+         * Dit is het array waarmee de foreach-loop het array doorloopt
+         */
+        $getallen = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        
+        /**
+         * Doorloop het array en bereken steeds voor ieder array-waarde het product
+         * echo dit op het scherm
+         */
+        foreach ($getallen as $index) {
+            $product = $index * $getal;
+            echo "<p>$index x $getal = $product</p>";
+        }
     }
 
+    tafel(10);
+    tafel(8);
+
+    
+
+
+    /**
+     * Pas de functie tafel aan zodat ik een tweede argument kan meegeven aan de
+     * functie die bepaalt welke tafel er wordt afgebeeld.
+     */
+    
     ?>
     
     
