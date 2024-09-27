@@ -94,66 +94,6 @@
     }
 
     /**
-     * Maak een functie die de tafel van 3 afbeeld op het scherm van 1 t/m 10
-     * Maak hiervoor een indexed-array die de getallen 1 t/m 10 als data heeft
-     * Gebruik een foreach-loop
-     * 
-     * tafel(3);
-     * 
-     * output:
-     * 1 x 3 = 3
-     * 2 x 3 = 6
-     * enz... 
-     * 10 x 3 = 30
-     */
-
-    // 
-
-    // function tafel($getal, $factor )
-    // {
-    //     $product = $getal * $factor;
-    //     return "<p>$getal x $factor = $product</p>";        
-    // }
-    
-    // foreach ($getallen as $getal) {
-    //     echo tafel($getal, 5);
-    // }
-
-    // tafel(6); //geeft de tafel van 6
-    // tafel(9); //geeft de tafel van 9
-
-    function tafel($getal)
-    {
-        echo "<h3>De tafel van $getal</h3>";
-        echo "***************";
-        /**
-         * Dit is het array waarmee de foreach-loop het array doorloopt
-         */
-        $getallen = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        
-        /**
-         * Doorloop het array en bereken steeds voor ieder array-waarde het product
-         * echo dit op het scherm
-         */
-        foreach ($getallen as $index) {
-            $product = $index * $getal;
-            echo "<p>$index x $getal = $product</p>";
-        }
-    }
-
-    tafel(10, 5, 15, 1);
-    tafel(8);
-
-    $test = range(5, 15, 1);
-
-    foreach ($test as $item) {
-        echo "$item<br>";
-    }
-
-    
-
-
-    /**
      * Pas de functie tafel aan zodat je zelf kunt aangeven vanaf welke waarde
      * de tafel start en stopt en met welke stap grootte
      * 
@@ -167,6 +107,86 @@
      * 
      * Laat je browser crashen door zeer hoge waarde mee te geven
      */
+
+    function tafel($getal, $start = 1, $eind = 10, $stap = 1)
+    {
+        echo "<h3>De tafel van $getal</h3>";
+        echo "***************";
+        /**
+         * Dit is het array waarmee de foreach-loop het array doorloopt
+         */
+        $getallen = range($start, $eind, $stap);
+        
+        /**
+         * Doorloop het array en bereken steeds voor ieder array-waarde het product
+         * echo dit op het scherm
+         */
+        foreach ($getallen as $index) {
+            $product = $index * $getal;
+            echo "<p>$index x $getal = $product</p>";
+        }
+    }
+
+    tafel(10, 5, 15, 2);
+    tafel(8, 5, 15, 2);
+    tafel(3);
+    // tafel(734, 1, 10000000, 1);
+
+
+    $fruitItem = 'banaan';
+
+    $fruit = ['appel', 'banaan', 'citroen'];
+
+    // echo in_array($fruitItem, $fruit);
+
+    if ( in_array($fruitItem, $fruit)) {
+        echo "<p>$fruitItem zit in het array</p>";
+    } else {
+        echo "<p>$fruitItem zit niet in het array</p>";
+    }
+
+     /**
+       * Maak een functie die controleert of een automerk in een array zit
+       * De functie krijgt een array mee en een automerk en als het automerk
+       * in het array zit krijg je de melding "De auto is aanwezig". Wanneer 
+       * het automerk niet in het array zit krijg je de melding "De auto is niet aanwezig"
+       * 
+       * $autos = ['Mercedes', 'Audi']
+       * 
+       * Gebruik het voorbeeld van W3schools.com: 
+       * https://www.w3schools.com/php/func_array_in_array.asp
+       * 
+       * merkAutoAanwezig($autos, 'Volkswagen');
+       * 
+       * Output:
+       * De auto is niet aanwezig.
+       */
+
+       $autos = array(
+            'Volkswagen',
+            'Audi',
+            'Mercedes',
+            'Tesla',
+            'Opel',
+            'Peugeot',
+            'Alfa Romeo',
+            'BMW',
+            'Austin Martin',
+            'Ferarri',
+            'Bentley'
+       );
+
+       function merkAutoAanwezig($autoArray, $automerk) 
+       {
+            if (in_array($automerk, $autoArray)){
+                return "<p>$automerk zit in het array</p>";
+            } else {
+                return "<p>$automerk zit niet in het array</p>";
+            }
+       }
+
+       echo merkAutoAanwezig($autos, 'Mercedes');
+       echo merkAutoAanwezig($autos, 'Lada');
     
     ?>
     
