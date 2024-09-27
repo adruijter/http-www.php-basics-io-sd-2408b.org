@@ -141,15 +141,31 @@
         }
     }
 
-    tafel(10);
+    tafel(10, 5, 15, 1);
     tafel(8);
+
+    $test = range(5, 15, 1);
+
+    foreach ($test as $item) {
+        echo "$item<br>";
+    }
 
     
 
 
     /**
-     * Pas de functie tafel aan zodat ik een tweede argument kan meegeven aan de
-     * functie die bepaalt welke tafel er wordt afgebeeld.
+     * Pas de functie tafel aan zodat je zelf kunt aangeven vanaf welke waarde
+     * de tafel start en stopt en met welke stap grootte
+     * 
+     * tafel(5, 10, 13, 1)
+     * 
+     * output:
+     * 10 x 5 = 50
+     * 11 x 5 = 55
+     * 12 x 5 = 60
+     * 13 x 5 = 65
+     * 
+     * Laat je browser crashen door zeer hoge waarde mee te geven
      */
     
     ?>
