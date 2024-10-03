@@ -58,21 +58,21 @@
      * De array-definities zitten in het codeblock van de functie
      * gebruik een if-elseif-else controlestructuur in de functie
      */
-
-     function klasZoeker($naam) 
-     {
+    
+    function klasZoeker($naam) 
+    {
         $io_sd_2408a = array('Arjan', 'Bert', 'Frank');
         $io_sd_2408b = array('Francien', 'Leo', 'Henk');
         $io_sd_2408c = array('Frans', 'Terence', 'Fred');
 
         if (in_array($naam, $io_sd_2408a)) {
-            echo "<p>$naam zit in klas IO-SD-2408A</p>";
+            return "<p>$naam zit in klas IO-SD-2408A</p>";
         } elseif (in_array($naam, $io_sd_2408b)) {
-            echo "<p>$naam zit in klas IO-SD-2408B</p>";
+            return "<p>$naam zit in klas IO-SD-2408B</p>";
         } elseif (in_array($naam, $io_sd_2408c)) {
-            echo "<p>$naam zit in klas IO-SD-2408C</p>";
+            return "<p>$naam zit in klas IO-SD-2408C</p>";
         } else {
-            echo "<p>$naam zit niet in klas IO-SD-2408A,B of C</p>";
+            return "<p>$naam zit niet in klas IO-SD-2408A,B of C</p>";
         }
      }
 
@@ -82,6 +82,14 @@
      echo klaszoeker('Leontien'); // output: Bert zit in klas IO-SD-2408A
 
 
+     /**
+      * Maak een functie die checked of een getal kleiner, gelijk aan of groter
+      * is dan het getal 10
+      * 
+      * getal10Checker(42) // geeft als output: Het getal 42 is groter dan 10
+      * getal10Checker(3) // geeft als output: Het getal 3 is kleiner dan 10
+      * getal10Checker(10) // geeft als output: Het getal 10 is gelijk aan 10
+      */
 
     ?>
 </body>
