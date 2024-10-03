@@ -20,6 +20,9 @@
         <li>
             <a href="app/lesweek3.php">Functies met PHP</a>
         </li>
+        <li>
+            <a href="app/lesweek4.php">Controlestructuren met PHP</a>
+        </li>
     </ol>
 
 
