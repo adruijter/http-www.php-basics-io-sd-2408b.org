@@ -91,6 +91,46 @@
       * getal10Checker(10) // geeft als output: Het getal 10 is gelijk aan 10
       */
 
+      function getal10Checker($getal)
+      {
+        if (is_numeric($getal)) {
+            if ($getal == 10) {
+                return "<p>Het getal $getal is gelijk aan 10</p>";
+            } elseif ($getal < 10) {
+                return "<p>Het getal $getal is kleiner dan 10</p>";
+            } elseif ($getal > 10) {
+                return "<p>Het getal $getal is groter dan 10</p>";
+            } else {
+                return "Er is iets mis gegaan";
+            }
+
+        } else {
+            return "De meegegeven waarde is geen getal";
+        }
+
+      }
+
+      echo getal10Checker(10);
+      echo getal10Checker(42);
+      echo getal10Checker(3);
+      echo getal10Checker('Leo');
+
+
+      /**
+       * Hieronder een voorbeel van de controlestructuur switch-case
+       */
+
+      $deelVanDeDag = 'middag';
+
+      switch ($deelVanDeDag) {
+        case 'ochtend':
+            echo "<p>Goedemorgen, het is ochtend</p>";
+            break;
+        case 'middag':
+            echo "<p>Goedemiddag, het is middag</p>";
+            break;
+      }
+
     ?>
 </body>
 </html>
