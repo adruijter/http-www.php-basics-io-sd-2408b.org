@@ -244,6 +244,25 @@
 
 
        /**
+        * Maak een associatief array $rapport met daarin 6 vakken met het
+        * behaalde cijfer. Zorg voor de volgende output:
+        * 
+        * Output:
+        * Vak: Nederlands => Cijfer: 6.4
+        * Vak: Engels => Cijfer: 8.9
+        * enz....
+        * 
+        * Gebruik hiervoor een foreach-loop
+        */
+
+        $rapport = array(
+            'Nederlands' => 6.4,
+            'Engels'=> 8.9); 
+
+        
+
+
+       /**
         * De for-loop
         */
     
@@ -262,12 +281,82 @@
         * array zit en die deze fruitsoort teruggeeft. Als het er niet in zit
         * krijg je de melding fruitsoort onbekend.
         *
-        * fruitChecker('Banaan'); //Output: Banaan
+        * fruitChecker('Banaan'); //Output: Fruitsoort Banaan zit in het array
         * fruitChecker('Kiwi'); //Output: Fruitsoort Kiwi is onbekend
         *
         * Gebruik een for-loop en een if-else controlestructuur in de functie 
-        * en de array functie in_array(); https://www.w3schools.com/php/func_array_in_array.asp
-        */ 
+        */
+        
+        function fruitChecker($fruitItem) 
+        {
+            $fruitSoorten = array('Banaan', 'Peer', 'Appel', 'Kers', 'Ananas');
+
+            for ($i = 0; $i < count($fruitSoorten); $i++) {
+                if ($fruitSoorten[$i] == $fruitItem) {
+                    return "<p>Fruitsoort $fruitItem zit in het array</p>";
+                }
+            }
+            return "<p>Fruitsoort $fruitItem is onbekend</p>";
+        }
+
+        echo fruitChecker('Banaan');
+        echo fruitChecker('Kiwi');
+
+
+        echo "<hr>";
+
+        echo '<p>' . str_repeat("z", 1) . '</p>';
+        
+
+        /**
+         * Maak de volgende tekening op je scherm:
+         * *
+         * **
+         * ***
+         * ****
+         * *****
+         * ******
+         * *****
+         * ****
+         * ***
+         * **
+         * *
+         * 
+         * Gebruik daarvoor een for-loop en een if-else statement en str_repeat()
+         */
+
+         for ($i = 1; $i < 12; $i++) {
+            if ($i <= 6) {
+                echo '<p>' . str_repeat('*', $i) . '</p>';
+            } else {
+                echo '<p>' . str_repeat('*', 12 - $i) . '</p>';
+            }
+         }
+
+         /**
+          * Maak een functie sterretjesMaker($aantalRijen) die bovenstaande weergeeft 
+          * maar dan voor verschillende aantallen rijen. Dus i.p.v 11 regels met * bijvoorbeeld
+          * 40 regels met *
+          */
+
+          function sterretjesMaker($aantalRijen)
+          {
+                for ($i = 1; $i < $aantalRijen; $i++) {
+                    if ($i <= ($aantalRijen/2)) {
+                        echo '<p>' . str_repeat('*', $i) . '</p>';
+                    } else {
+                        echo '<p>' . str_repeat('*', $aantalRijen - $i) . '</p>';
+                    }
+                }
+          }
+
+          sterretjesMaker(12); //output wat er bovenstaat
+          sterretjesMaker(40); //output wat er bovenstaat met 40 regels
+
+        
+
+
+
 
 
 
@@ -279,6 +368,19 @@
     ?>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     <form action="lesweek4.php" method="post">
         <select name="school" >
             <!-- Maak meerdere option tages -->
@@ -286,6 +388,9 @@
             <option value="VMBO TL">VMBO TL</option>
             <option value="VMBO Kader">VMBO Kader</option>
             <option value="VMBO Basis">VMBO Basis</option>
+            <option value="VMBO Gemengd">VMBO Gemengd</option>
+            <option value="VWO">VWO</option>
+            <option value="HAVO">HAVO</option>
         </select>
         <input type="submit" name="submit" value="verstuur">
     </form>
