@@ -256,10 +256,17 @@
         */
 
         $rapport = array(
-            'Nederlands' => 6.4,
-            'Engels'=> 8.9); 
+            'Nederlands'    => 6.4,
+            'Engels'        => 8.9,
+            'Rekenen'       => 4.7,
+            'Backend'       => 9.2,
+            'Frontend'      => 7.8,
+            'LOB'           => 3.2
+        );
 
-        
+        foreach ($rapport as $vak => $cijfer) {
+            echo "<p>Vak: $vak => Cijfer: $cijfer</p>";
+        }        
 
 
        /**
