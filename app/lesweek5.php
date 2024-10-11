@@ -123,8 +123,69 @@
     echo kilometerVergoeding(50);
     Output: U krijgt voor de 50 km het bedrag van 38 euro
 
+    <?php
+    function kilometerVergoeding($aantalKilometers)
+    {      
+        $vergoeding = 0;
 
+        if ($aantalKilometers <= 10) {
+            $vergoeding += $aantalKilometers * 0.3;
+        } elseif ($aantalKilometers > 10 && $aantalKilometers <= 20) {
+            $vergoeding += 3 + ($aantalKilometers - 10) * 0.5;
+        } else {
+            $vergoeding += 3 + 5 + ($aantalKilometers - 20) * 1;
+        }
 
+        return "<p>U krijgt voor de $aantalKilometers km het bedrag van $vergoeding euro</p>";
+    }
+
+    echo kilometerVergoeding(5);
+    echo kilometerVergoeding(15);
+    echo kilometerVergoeding(25);
+    echo kilometerVergoeding(50);
+
+    ?>
+
+    Maak een functie somVanArray($getallen) die een array meekrijgt 
+    de functie berekent dan de som van alle waarden in het array
+    en geeft aan of deze som een even of oneven getal is
+    Voorbeeld:
+    $getallen = array(12, 23, 4, 6, 54);
+    echo somVanArray($getallen);
+    Output: De som van alle waarden is 99. Dit is een oneven getal
+
+    
+    <?php
+        $getallen = array(12, 23, 4, 6, 54);
+        $getallen_1 = array(11, 23, 4, 6, 54);
+        $getallen_2 = array(10, 23, 4, 6, 54);
+        $getallen_3 = array(9, 23, 4, 6, 54);
+
+        function somVanArray($getallen) 
+        {
+            $som = 0;
+            foreach ($getallen as $getal) {
+                $som += $getal;
+            }
+
+            $evenOfOneven;
+            if ($som % 2) {
+                $evenOfOneven = 'oneven';
+            } else {
+                $evenOfOneven = 'even';
+            }
+
+            return "<p>De som van alle waarden is: $som. Dit is een $evenOfOneven getal</p>";
+
+        }
+
+        echo somVanArray($getallen);
+        echo somVanArray($getallen_1);
+        echo somVanArray($getallen_2);
+        echo somVanArray($getallen_3);
+        
+
+    ?>
 
     
 
