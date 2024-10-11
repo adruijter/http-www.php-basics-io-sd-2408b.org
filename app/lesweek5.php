@@ -118,7 +118,9 @@
     De functie heet kilometerVergoeding($aantalKilometers).
     Voor de eerste 10 km krijg je 0.30 euro per km.
     Tussen de 10 en 20 km krijg je 0.50 euro per km.
+    Boven de 20 km krijg je 1 euro per km.
     De functie geeft het totaalbedrag terug.
+    echo kilometerVergoeding(50);
     Output: U krijgt voor de 50 km het bedrag van 38 euro
 
 
