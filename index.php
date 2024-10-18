@@ -26,6 +26,9 @@
         <li>
             <a href="app/lesweek5.php">Operatoren met PHP</a>
         </li> 
+        <li>
+            <a href="app/proeftoets.php">Proeftoets</a>
+        </li>
     </ol>
 
 
