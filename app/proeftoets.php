@@ -88,8 +88,7 @@
             }
         } else {
             return "<p>Error! Geef gehele getallen op groter dan 0.</p>";
-        }
-        
+        }       
     }
 
     echo rekenen(3, 5, "+");
@@ -99,8 +98,79 @@
     echo rekenen(10, 2, "slkjdfslkjdf");
     echo rekenen(-2, 2, "+");
     echo rekenen(10.5, 2, "x");
+    ?>
 
+    <h5>Vraag 5</h5>
 
+    <?php
+
+    function tafelVan($getal, $startGetal = 1, $eindGetal = 10)
+    {
+        if ($startGetal < $eindGetal ) {
+            $index = $startGetal;
+            while($index <= $eindGetal) {
+                $product = $index * $getal;
+                echo "<p>$index x $getal = $product</p>";
+                $index++;
+            }
+        } else {
+            echo "<p>Uw startgetal is groter of gelijk aan het eindgetal, graag veranderen.</p>";
+        }
+    }
+
+    tafelVan(8, 5, 15);
+    tafelVan(1, 1, 5);
+    tafelVan(2, 2, 6);
+    tafelVan(8, 15, 5);
+    tafelVan(5);
+    ?>
+
+    <h5>Vraag 6</h5>
+
+    <?php
+     function asciiArt() 
+     {
+         for ($i = 0; $i < 9; $i++) {
+             if ($i < 4) {
+                 echo str_repeat("&nbsp;", $i) . "x" . str_repeat("&nbsp;", 7 - 2 * $i) . "x<br>";
+             }
+             if ($i == 5) {
+                 echo str_repeat("&nbsp;", $i - 1) . "x<br>";
+             }
+             if ($i > 5) {
+                 echo str_repeat("&nbsp;", 9 - $i) . "x" . str_repeat("&nbsp;", 2 * $i - 11) . "x<br>";
+             }
+         }
+     }
+
+     asciiArt();
+
+    ?>
+
+    <h5>Vraag 7</h5>
+
+    <?php
+
+    function rechthoek($lengte, $breedte)
+    {
+        if ($lengte < $breedte) {
+            return "<p>De lengte is kleiner dan de breedte, probeer opnieuw</p>";
+        } elseif (!is_int($lengte) || !is_int($breedte)) {
+            return "<p>De lengte of breedte of beiden zijn geen gehele getallen, probeer opnieuw</p>";
+        } elseif ($lengte < 0 || $breedte < 0) {
+            return "<p>De lengte of breedte of beiden zijn kleiner dan 0, probeer opnieuw</p>";
+        } else {
+            $oppervlakte = $lengte * $breedte;
+            return "<p>De oppervlakte van de rechthoek van $lengte bij $breedte is: $oppervlakte</p>";
+        }
+    }
+
+    echo rechthoek(10, 5);
+    echo rechthoek(-4, -7);
+    echo rechthoek(8, -5);
+    echo rechthoek(8.5, 5);
+    echo rechthoek(6, 5.1);
+    echo rechthoek(4, 5);
 
     ?>
     
