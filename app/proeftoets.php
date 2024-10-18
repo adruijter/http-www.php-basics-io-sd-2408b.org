@@ -57,6 +57,49 @@
         $totalPrice += $price;
     }
     echo "<p>Het totaalbedrag voor het wagenpark is: $totalPrice &euro;</p>";
+    ?>
+
+    <h5>Vraag 4</h5>
+
+    <?php
+
+    function rekenen($getal1, $getal2, $bewerking) {
+
+        if ($getal1 >= 0 && $getal2 > 0 && is_int($getal1) && is_int($getal2)) {
+            switch ($bewerking) {
+                case '+':
+                    $som  = $getal1 + $getal2;
+                    return "<p>De som van $getal1 + $getal2 = $som</p>";
+                    break;
+                case 'x':
+                    $product = $getal1 * $getal2;
+                    return "<p>Het product van $getal1 x $getal2 = $product</p>";
+                    break;
+                case ':':
+                    $quotient = $getal1 /$getal2;
+                    return "<p>Het quotient van $getal1 : $getal2 = $quotient</p>";
+                    break;
+                case 'macht':
+                    $macht = $getal1 ** $getal2;
+                    return "<p>$getal1 tot de macht $getal2 = $macht</p>";
+                    break;
+                default:
+                    return "<p>De opgegeven bewerking is niet bekent</p>";
+            }
+        } else {
+            return "<p>Error! Geef gehele getallen op groter dan 0.</p>";
+        }
+        
+    }
+
+    echo rekenen(3, 5, "+");
+    echo rekenen(3, 5, "x");
+    echo rekenen(10, 5, ":");
+    echo rekenen(10, 2, "macht");
+    echo rekenen(10, 2, "slkjdfslkjdf");
+    echo rekenen(-2, 2, "+");
+    echo rekenen(10.5, 2, "x");
+
 
 
     ?>
