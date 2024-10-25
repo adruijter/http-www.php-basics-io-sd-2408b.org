@@ -29,6 +29,9 @@
         <li>
             <a href="app/proeftoets.php">Proeftoets</a>
         </li>
+        <li>
+            <a href="app/lesweek7.php">Objecten en Klassen met PHP</a>
+        </li>
     </ol>
 
 
